@@ -1,0 +1,136 @@
+@import 'variable';
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom,
+      rgba($color-primary-dark, 0.7),
+      rgba($color-primary-dark, 0.7)),
+    url(../img/hero-image.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Quicksand', sans-serif;
+  color: #fff;
+  position: relative;
+}
+
+.navigation__bar {
+  padding: 1rem 0;
+  background-color: rgba($color-primary-dark, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 18rem;
+  cursor: pointer;
+
+  &__image {
+    display: inline-block;
+    height: 6rem;
+    margin-right: 0.8rem;
+  }
+
+  &__name {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+.navigation {
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin-right: 13.6rem;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 0.2rem;
+  }
+
+  &__item {
+    cursor: pointer;
+    padding: 1.2rem 0;
+    border-bottom: 1.5px solid transparent;
+    transition: all 0.2s ease-out;
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: #ff0c0c;
+      width: 0%;
+      margin: 0 auto;
+      margin-top: 1.2rem;
+      transition: all 0.3s ease-out;
+    }
+
+    &:hover {
+      color: #ff0c0c;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.mainWrapper {
+  width: 114rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.headerText {
+  font-size: 5.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.buttonFree,
+.buttonPremium {
+  text-transform: uppercase;
+  margin-top: 2.2rem;
+  padding: 1.6rem 3.2rem;
+  font-size: 1.6rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  letter-spacing: 0.4px;
+  transition: all 0.4s ease-out;
+}
+
+.buttonFree {
+  background-color: #000;
+  color: #fd7951;
+  border: 2px solid #fd7951;
+  margin-right: 2rem;
+
+  &:hover {
+    color: #ed80c2;
+    border: 2px solid #ed80c2;
+  }
+}
+
+.buttonPremium {
+  background-color: transparent;
+  color: #3ee8ad;
+  border: 2px solid #3ee8ad;
+
+  &:hover {
+    color: #19f6e8;
+    border: 2px solid #19f6e8;
+  }
+}

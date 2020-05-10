@@ -1,0 +1,28 @@
+.gallery {
+  float: left;
+  width: 48%;
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: 8rem;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  &__imageWrapper {
+    flex: 0 1 50%;
+    overflow: hidden;
+  }
+
+  &__image {
+    margin-top: -0.2rem;
+    height: 26rem;
+    width: 100%;
+    transform: scale(1.06);
+    opacity: 0.8;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.02);
+    }
+  }
+}

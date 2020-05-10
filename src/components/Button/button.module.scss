@@ -1,0 +1,38 @@
+@import '../../sass/abstract/variable';
+
+.buttonFree,
+.buttonPremium {
+  text-transform: uppercase;
+  margin-top: 2.2rem;
+  padding: 1.6rem 3.2rem;
+  font-size: 1.6rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  letter-spacing: 0.4px;
+  transition: all 0.4s ease-out;
+}
+
+.buttonFree {
+  background-color: #000;
+  color: #fd7951;
+  border: 2px solid #fd7951;
+  margin-right: 2rem;
+
+  &:hover {
+    color: #ed80c2;
+    border: 2px solid #ed80c2;
+  }
+}
+
+.buttonPremium {
+  background-color: transparent;
+  color: #3ee8ad;
+  border: 2px solid #3ee8ad;
+
+  &:hover {
+    color: #19f6e8;
+    border: 2px solid #19f6e8;
+  }
+}

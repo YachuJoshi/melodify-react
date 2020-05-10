@@ -1,0 +1,70 @@
+@import '../../sass/abstract/variable';
+
+.navigation__bar {
+  padding: 1rem 0;
+  background-color: rgba($color-primary-dark, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 18rem;
+  cursor: pointer;
+
+  &__image {
+    display: inline-block;
+    height: 6rem;
+    margin-right: 0.8rem;
+  }
+
+  &__name {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
+
+.navigation {
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin-right: 13.6rem;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 0.2rem;
+  }
+
+  &__item {
+    cursor: pointer;
+    padding: 1.2rem 0;
+    border-bottom: 1.5px solid transparent;
+    transition: all 0.2s ease-out;
+
+    &:not(:last-child) {
+      margin-right: 4rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background-color: #ff0c0c;
+      width: 0%;
+      margin: 0 auto;
+      margin-top: 1.2rem;
+      transition: all 0.3s ease-out;
+    }
+
+    &:hover {
+      color: #ff0c0c;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

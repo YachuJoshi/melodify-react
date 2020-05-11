@@ -1,0 +1,121 @@
+.plans {
+  &__box {
+    position: relative;
+    padding: 6rem 8rem 13rem 8rem;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.20);
+
+    &:not(:last-child) {
+      margin-right: 5rem;
+    }
+  }
+
+  &__title {
+    color: #F13030;
+    font-weight: 500;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.6px;
+    margin-bottom: 1.2rem;
+  }
+
+  &__price {
+    color: #0C0A3E;
+    font-size: 3.8rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.6px;
+
+    span {
+      font-size: 2rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 1.5px;
+      width: 100%;
+      background-color: currentColor;
+      margin: 2rem 0;
+    }
+  }
+
+  &__features {
+    list-style: none;
+  }
+
+  &__featuresItem {
+    padding: 1rem 0;
+  }
+
+  &__iconCheck,
+  &__iconCross {
+    font-size: 2rem;
+    margin-right: 2.5rem;
+  }
+
+  &__iconCheck {
+    color: #3aa22b;
+  }
+
+  &__iconCross {
+    color: #F13030;
+  }
+
+  &__feature__title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+
+  &__buttonFree,
+  &__buttonPremium {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2.2rem;
+    padding: 1.8rem 3.8rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    outline: none;
+  }
+
+  &__buttonFree {
+    background-color: transparent;
+    color: #f24747;
+    border: 2px solid #f24747;
+
+    &:hover {
+      color: #3aa22b;
+      border: 2px solid #3aa22b;
+      transform: translateX(-50%) scale(1.05);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.20);
+    }
+
+    &:active {
+      transform: translateX(-50%) scale(1.05) translateY(6px);
+    }
+  }
+
+  &__buttonPremium {
+    background-color: #f24747;
+    color: #f7f7f7;
+
+    &:hover {
+      background-color: #3aa22b;
+      transform: translateX(-50%) scale(1.05);
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.20);
+    }
+
+    &:active {
+      transform: translateX(-50%) scale(1.05) translateY(6px);
+    }
+  }
+}

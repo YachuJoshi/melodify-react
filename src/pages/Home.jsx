@@ -18,6 +18,7 @@ import { PlanBox } from '../components/PlanBox/PlanBox';
 import { ImageComposition } from '../components/ImageComposition/ImageComposition';
 import { CTASideBar } from '../components/CTASideBar/CTASideBar';
 import { Form } from '../components/Form/Form';
+import { Footer } from '../components/Footer/Footer';
 
 const Home = () => {
   return (
@@ -96,6 +97,8 @@ const Home = () => {
           <Form />
         </div>
       </section>
+
+      <Footer />
     </>
   );
 };

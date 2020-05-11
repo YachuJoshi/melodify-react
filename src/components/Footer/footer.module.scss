@@ -1,0 +1,57 @@
+.footer {
+  font-family: 'Quicksand', sans-serif;
+  padding: 5rem 0 9rem 0;
+  background-color: #1a2021;
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.footer__aboutUsList {
+  list-style: none;
+  display: flex;
+  font-size: 2rem;
+
+  li {
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    &:hover {
+      transform: rotate(4deg) scale(1.2);
+    }
+
+    &:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+  }
+}
+
+.footer__socialIconsList {
+  float: right;
+  margin-top: -2rem;
+  display: flex;
+  list-style: none;
+
+  li {
+    &:not(:last-child) {
+      margin-right: 2.6rem;
+    }
+  }
+}
+
+.footer__socialIcon {
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.footer__text {
+  font-size: 1.8rem;
+  margin-top: 2.9rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

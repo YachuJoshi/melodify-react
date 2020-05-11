@@ -14,8 +14,9 @@
 }
 
 .label {
-  color: #f24747;
-  font-size: 2rem;
+  font-family: 'Valera Round', sans-serif;
+  color: #fff;
+  font-size: 1.9rem;
   font-weight: 500;
   text-transform: capitalize;
   margin-top: 1.5rem;
@@ -36,13 +37,13 @@
   &__name,
   &__email,
   &__feedback {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Valera Round', sans-serif;
     font-size: 1.6rem;
-    color: #222;
+    color: #1a2021;
     padding: 2rem;
     width: 85%;
     margin-left: -4rem;
-    border: 2px solid #222;
+    border: 2px solid #88807f;
     outline: none;
     border-radius: 10px;
     transition: all 0.3s linear;
@@ -60,21 +61,21 @@
 
   &__name::placeholder,
   &__email::placeholder {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #111;
+    font-family: 'Valera Round', sans-serif;
+    color: #333;
     font-size: 1.6rem;
   }
 
   &__feedback::placeholder {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: #111;
+    font-family: 'Valera Round', sans-serif;
+    color: #333;
   }
 
   &__name:focus,
   &__email:focus,
   &__feedback:focus {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.16);
-    border: 2px solid #f24747;
+    border: 2px solid #d33d42;
   }
 }
 
@@ -89,7 +90,7 @@
   transform: translateX(-50%);
   padding: 1.6rem 3.2em;
   border-radius: 10rem;
-  background-color: #f24747;
+  background-color: #d33d42;
   color: #f7f7f7;
   border: none;
   transition: all 0.3s linear;

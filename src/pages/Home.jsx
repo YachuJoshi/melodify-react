@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
 import styles from '../sass/layout/home.module.scss';
@@ -10,6 +11,9 @@ import ImageFour from '../img/gallery/image-4.jpg';
 import CustomerOne from '../img/yeji.jpg';
 import CustomerTwo from '../img/irene.jpg';
 import VideoSource from '../img/background-vid.mp4';
+
+import { IoMdCheckmark } from 'react-icons/io';
+import { GiCrossMark } from 'react-icons/gi';
 
 import { NavBar } from '../components/NavBar/NavBar';
 import { Button } from '../components/Button/Button'
@@ -40,7 +44,71 @@ const Home = () => {
         Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
         there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the 
         Semantics, a large language ocean. Covered ten nor comfort offices carried. `
-    }];
+    }
+  ];
+  const plans = [
+    {
+      title: 'Free',
+      price: '$0.00',
+      features: [
+        {
+          name: 'Shuffle',
+          granted: true,
+        },
+        {
+          name: 'Ad free',
+          granted: false,
+        },
+        {
+          name: 'Unlimited skips',
+          granted: false,
+        },
+        {
+          name: 'Listen offline',
+          granted: false,
+        },
+        {
+          name: 'Play any track',
+          granted: false,
+        },
+        {
+          name: 'High quality audio',
+          granted: false,
+        }
+      ]
+    },
+    {
+      title: 'Premium',
+      price: '$9.99',
+      features: [
+        {
+          name: 'Shuffle',
+          granted: true,
+        },
+        {
+          name: 'Ad free',
+          granted: true,
+        },
+        {
+          name: 'Unlimited skips',
+          granted: true,
+        },
+        {
+          name: 'Listen offline',
+          granted: true,
+        },
+        {
+          name: 'Play any track',
+          granted: true,
+        },
+        {
+          name: 'High quality audio',
+          granted: true,
+        }
+      ]
+    }
+  ]
+
   return (
     <>
       <header className={styles.header}>
@@ -75,7 +143,6 @@ const Home = () => {
       </section>
 
       <section className={styles.sectionTestimonials}>
-
         <Video
           VideoSource={VideoSource}
         />
@@ -87,7 +154,45 @@ const Home = () => {
         <TestimonialBox
           customers={customers}
         />
+        <a href="#" className={styles.testimonial__readMore}>Read More Stories &rarr;</a>
+      </section>
 
+      <section className={styles.sectionPlans}>
+        <h2 className={styles.plans__heading}>
+          Listen free or subscribe to Melodify Premium
+        </h2>
+        <div className={styles.plans__wrapper}>
+          {plans.map(({ title, price, features }) => (
+            <div className={styles.plans__box}>
+              <h3 className={styles.plans__title}>
+                {title}
+              </h3>
+              <div className={styles.plans__price}>
+                {price}
+                <span>/month</span>
+              </div>
+              <ul className={styles.plans__features}>
+                {features.map(({ name, granted }) => (
+                  <li className={styles.plans__featuresItem}>
+                    {granted ?
+                      <IoMdCheckmark className={styles.plans__iconCheck} /> :
+                      <GiCrossMark className={styles.plans__iconCross} />}
+                    <span className={styles.plans__feature__title}>
+                      {name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+              {title === 'Free' ?
+                <button className={styles.plans__buttonFree}>
+                  Get Free
+                </button> :
+                <button className={styles.plans__buttonPremium}>
+                  Get Premium
+                </button>}
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );

@@ -5,9 +5,10 @@ import styles from './gallery.module.scss';
 const Gallery = ({ gallery }) => {
   return (
     <div className={styles.gallery}>
-      {gallery.map(image => {
+      {gallery.map((image, index) => {
         return (
-          <figure className={styles.gallery__imageWrapper}>
+          <figure
+            key={`${image}${index}`} className={styles.gallery__imageWrapper}>
             <img
               key={image}
               src={image}

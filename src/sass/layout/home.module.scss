@@ -105,3 +105,16 @@
     display: flex;
   }
 }
+
+.sectionCTA {
+  padding: 10rem 0 16rem 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #1a2021;
+  color: #fff;
+}
+
+.divCTA.row {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}

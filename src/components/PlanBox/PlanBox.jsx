@@ -8,7 +8,7 @@ import { GiCrossMark } from 'react-icons/gi';
 const PlanBox = ({ plans }) => {
   return (
     plans.map(({ title, price, features }) => (
-      <div className={styles.plans__box}>
+      <div key={title} className={styles.plans__box}>
         <h3 className={styles.plans__title}>
           {title}
         </h3>
@@ -18,7 +18,10 @@ const PlanBox = ({ plans }) => {
         </div>
         <ul className={styles.plans__features}>
           {features.map(({ name, granted }) => (
-            <li className={styles.plans__featuresItem}>
+            <li
+              className={styles.plans__featuresItem}
+              key={name}
+            >
               {granted ?
                 <IoMdCheckmark className={styles.plans__iconCheck} /> :
                 <GiCrossMark className={styles.plans__iconCross} />}

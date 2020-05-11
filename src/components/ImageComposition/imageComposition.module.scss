@@ -1,0 +1,20 @@
+.cta {
+  &__composition {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  &__image {
+    height: 10rem;
+    outline-offset: 1.4rem;
+    z-index: 10;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      outline: 1rem solid #fff;
+      transform: scale(1.12);
+      z-index: 20;
+    }
+  }
+}

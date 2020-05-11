@@ -5,7 +5,7 @@ import styles from './testimonialBox.module.scss';
 const TestimonialBox = ({ customers }) => {
   return (
     customers.map(({ name, image, heading, description }) => (
-      <div className="row">
+      <div key={name} className="row">
         <div className={styles.story}>
           <figure className={styles.story__shape}>
             <img src={image} alt="Person" className={styles.story__image} />

@@ -22,16 +22,16 @@ const SideList = () => {
     <div className={styles.list}>
       <h2 className={styles.list__heading}>
         What's on Melodify?
-            </h2>
+      </h2>
       {modernLisiting.map(({ title, description }) => (
-        <>
+        <div key={title}>
           <h3 className={styles.list__title}>
             {title}
           </h3>
           <p className={styles.list__description}>
             {description}
           </p>
-        </>
+        </div>
       ))}
     </div>
   );

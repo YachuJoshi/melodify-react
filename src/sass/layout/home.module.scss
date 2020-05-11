@@ -107,7 +107,7 @@
 }
 
 .sectionCTA {
-  padding: 10rem 0 16rem 0;
+  padding: 10rem 0 18rem 0;
   font-family: 'Quicksand', sans-serif;
   background-color: #1a2021;
   color: #fff;
@@ -117,4 +117,20 @@
   display: flex;
   flex-flow: row nowrap;
   position: relative;
+}
+
+.sectionGetStarted {
+  padding: 8rem 0 15rem 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.formHeading {
+  font-size: 4.6rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 4.8rem;
 }

@@ -17,6 +17,7 @@ import { Video } from '../components/BgVideo/Video';
 import { PlanBox } from '../components/PlanBox/PlanBox';
 import { ImageComposition } from '../components/ImageComposition/ImageComposition';
 import { CTASideBar } from '../components/CTASideBar/CTASideBar';
+import { Form } from '../components/Form/Form';
 
 const Home = () => {
   return (
@@ -84,6 +85,15 @@ const Home = () => {
           <ImageComposition
             composition={composition}
           />
+        </div>
+      </section>
+
+      <section className={styles.sectionGetStarted}>
+        <div className="row">
+          <h2 className={styles.formHeading}>
+            We're Glad To Hear From You
+          </h2>
+          <Form />
         </div>
       </section>
     </>

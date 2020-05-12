@@ -9,7 +9,6 @@ const Form = () => {
 
   return (
     <form
-
       onSubmit={event => event.preventDefault()}
     >
       <div className={styles.form}>

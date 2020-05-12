@@ -5,7 +5,8 @@ import styles from '../sass/layout/home.module.scss';
 
 import { gallery, customers, plans, composition } from '../Data';
 
-import VideoSource from '../img/background-vid.mp4';
+import VideoSourceMp4 from '../img/background-vid.mp4';
+import VideoSourceWebm from '../img/background-vid.webm';
 
 import { NavBar } from '../components/NavBar/NavBar';
 import { Button } from '../components/Button/Button'
@@ -23,7 +24,7 @@ import { Footer } from '../components/Footer/Footer';
 const Home = () => {
   return (
     <>
-      <header className={styles.header}>
+      <header id="header" className={styles.header}>
         <NavBar />
         <div className={`${styles.mainWrapper}`}>
           <h1 className={styles.headerText}>
@@ -56,7 +57,8 @@ const Home = () => {
 
       <section className={styles.sectionTestimonials}>
         <Video
-          VideoSource={VideoSource}
+          VideoSourceMp4={VideoSourceMp4}
+          VideoSourceWebm={VideoSourceWebm}
         />
 
         <h2 className={styles.testimonial__heading}>

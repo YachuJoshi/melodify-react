@@ -3,8 +3,8 @@ import ImageTwo from './img/gallery/image-2.jpg';
 import ImageThree from './img/gallery/image-3.jpg';
 import ImageFour from './img/gallery/image-4.jpg';
 
-import CustomerOne from './img/yeji.jpg';
-import CustomerTwo from './img/irene.jpg';
+import CustomerOne from './img/testimonial/yeji.jpg';
+import CustomerTwo from './img/testimonial/irene.jpg';
 
 import JB from './img/composition/jb.jpg';
 import ARI from './img/composition/ari.jpg';

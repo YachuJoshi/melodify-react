@@ -5,9 +5,15 @@ import Logo from '../../img/melodify-logo.png';
 import styles from './navBar.module.scss';
 
 const NavBar = () => {
+  const scrollToTop = () => {
+    let element = document.querySelector('#header');
+    element.scrollIntoView();
+  }
   return (
     <div className={styles.navigation__bar}>
-      <figure className={styles.logo}>
+      <figure
+        onClick={() => scrollToTop()}
+        className={styles.logo}>
         <img src={Logo} alt="Logo" className={styles.logo__image} />
         <figcaption className={styles.logo__name}>Melodify</figcaption>
       </figure>

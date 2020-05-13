@@ -34,11 +34,11 @@ const Home = () => {
           <Button
             type="FREE">
             Get Melodify Free
-        </Button>
-          <Button
-            type="PREMIUM">
-            Get Melodify Premium
-        </Button>
+          </Button>
+            <Button
+              type="PREMIUM">
+              Get Melodify Premium
+          </Button>
         </div>
       </header>
 

@@ -1,3 +1,5 @@
+@import '../abstract/mixin';
+
 *,
 *::before,
 *::after {
@@ -9,6 +11,18 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1rem = 8px
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px
+  }
 }
 
 body {
@@ -19,6 +33,14 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
+
+  @include respond(tab-port) {
+    max-width: 102rem;
+  }
+
+  @include respond(mid) {
+    max-width: 90rem;
+  }
 }
 
 ::selection {

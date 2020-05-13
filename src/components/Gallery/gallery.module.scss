@@ -1,3 +1,5 @@
+@import '../../sass/abstract/mixin';
+
 .gallery {
   float: left;
   width: 48%;
@@ -7,18 +9,50 @@
   border-radius: 1rem;
   overflow: hidden;
 
+  @include respond(tab-port) {
+    width: 48%;
+    margin: 0 6rem;
+  }
+
+  @include respond(mid) {
+    width: 45%;
+    margin: 0 5rem 0 2.5rem;
+  }
+
+  @include respond(phone) {
+    float: none;
+    width: 90%;
+    margin: 0;
+    margin-left: 5%;
+  }
+
   &__imageWrapper {
     flex: 0 1 50%;
     overflow: hidden;
+
+    @include respond(phone) {
+      flex: 0 1 25%;
+    }
   }
 
   &__image {
-    margin-top: -0.2rem;
-    height: 26rem;
+    height: 25.5rem;
     width: 100%;
     transform: scale(1.06);
     opacity: 0.8;
     transition: all 0.3s ease-out;
+
+    @include respond(tab-port) {
+      height: 24rem;
+    }
+
+    @include respond(mid) {
+      height: 20rem;
+    }
+
+    @include respond(phone) {
+      height: 18rem;
+    }
 
     &:hover {
       opacity: 1;

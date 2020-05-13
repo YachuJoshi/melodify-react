@@ -1,8 +1,18 @@
+@import '../../sass/abstract/mixin';
+
 .cta {
   &__composition {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+
+    @include respond(tab-port) {
+      margin-right: 4rem;
+    }
+
+    @include respond(mid) {
+      margin-right: 0;
+    }
   }
 
   &__image {
@@ -10,6 +20,18 @@
     outline-offset: 1.4rem;
     z-index: 10;
     transition: all 0.2s ease-out;
+
+    @include respond(tab-port) {
+      height: 12rem;
+    }
+
+    @include respond(mid) {
+      height: 10rem;
+    }
+
+    @include respond(phone) {
+      height: 12rem;
+    }
 
     &:hover {
       outline: 1rem solid #fff;

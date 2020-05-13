@@ -1,3 +1,5 @@
+@import '../../sass/abstract/mixin';
+
 .plans {
   &__box {
     position: relative;
@@ -9,6 +11,15 @@
 
     &:not(:last-child) {
       margin-right: 5rem;
+
+      @include respond(phone) {
+        margin-right: 0;
+        margin-bottom: 6rem;
+      }
+    }
+
+    @include respond(phone) {
+      padding: 6rem 10rem 13rem 10rem;
     }
   }
 
@@ -97,12 +108,12 @@
     &:hover {
       color: #3aa22b;
       border: 2px solid #3aa22b;
-      transform: translateX(-50%) scale(1.05);
+      transform: translateX(-50%) scale(1.05) translateY(-4px);
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.20);
     }
 
     &:active {
-      transform: translateX(-50%) scale(1.05) translateY(6px);
+      transform: translateX(-50%) scale(1.05) translateY(2px);
     }
   }
 
@@ -112,12 +123,12 @@
 
     &:hover {
       background-color: #3aa22b;
-      transform: translateX(-50%) scale(1.05);
+      transform: translateX(-50%) scale(1.05) translateY(-4px);
       box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.20);
     }
 
     &:active {
-      transform: translateX(-50%) scale(1.05) translateY(6px);
+      transform: translateX(-50%) scale(1.05) translateY(2px);
     }
   }
 }

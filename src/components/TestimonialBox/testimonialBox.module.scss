@@ -1,3 +1,5 @@
+@import '../../sass/abstract/mixin';
+
 .story {
   width: 75%;
   margin: 5rem auto;
@@ -9,6 +11,20 @@
   font-size: 2rem;
   transform: skewX(-12deg);
 
+  @include respond(tab-port) {
+    width: 90%;
+  }
+
+  @include respond(mid) {
+    width: 80%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
+
   &__shape {
     position: relative;
     width: 15rem;
@@ -19,6 +35,10 @@
     shape-outside: circle(50% at 50% 50%);
     border-radius: none;
     overflow: hidden;
+
+    @include respond(phone) {
+      transform: translateX(-1.5rem) skewX(0);
+    }
   }
 
   &__image {
@@ -30,6 +50,10 @@
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__heading {
@@ -41,6 +65,10 @@
     margin-top: -1rem;
     margin-bottom: 2rem;
     color: #1a2021;
+
+    @include respond(phone) {
+      margin-bottom: 1rem;
+    }
   }
 
   &__caption {

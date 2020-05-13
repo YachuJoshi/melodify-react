@@ -1,7 +1,19 @@
+@import '../../sass/abstract/mixin';
+
 .cta {
   &__textWrapper {
     float: left;
     width: 50%;
+
+    @include respond(tab-port) {
+      margin-left: 5rem;
+    }
+
+    @include respond(mid) {
+      text-align: center;
+      float: none;
+      width: 90%;
+    }
   }
 
   &__heading {
@@ -16,6 +28,15 @@
     font-weight: 400;
     width: 90%;
     letter-spacing: 0.4px;
+
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+    }
+
+    @include respond(mid) {
+      width: 100%;
+      margin-bottom: 0;
+    }
   }
 
   &__button {
@@ -32,6 +53,15 @@
     border-radius: 5px;
     border: 2px solid #19f6e8;
     transition: all 0.2s linear;
+
+    @include respond(mid) {
+      margin: 5rem 0;
+      padding: 1.8rem 5.4rem;
+    }
+
+    @include respond(phone) {
+      margin: 6rem 0;
+    }
 
     &:hover {
       border: 2px solid #fd7951;

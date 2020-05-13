@@ -94,7 +94,6 @@
 .navigation__bar {
   padding: 1rem 0;
   background-color: rgba($color-primary-dark, 0.8);
-  display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -102,12 +101,24 @@
   right: 0;
   z-index: 200;
 
+  @include respond(big-desktop) {
+    display: flex;
+  }
+
   @include respond(phone) {
-    height: 100vh;
-    width: 30%;
-    left: 70%;
-    flex-flow: column;
-    justify-content: space-evenly;
+    display: none;
+  }
+
+  &__active {
+    display: flex;
+
+    @include respond(phone) {
+      height: 100vh;
+      width: 30%;
+      left: 70%;
+      flex-flow: column;
+      justify-content: space-evenly;
+    }
   }
 }
 
@@ -151,9 +162,11 @@
 }
 
 .navigation {
-  font-size: 1.9rem;
-  font-weight: 500;
-  margin-right: 13.6rem;
+  @include respond(big-desktop) {
+    font-size: 1.9rem;
+    font-weight: 500;
+    margin-right: 13.6rem;
+  }
 
   @include respond(tab-port) {
     margin-right: 7.5rem;

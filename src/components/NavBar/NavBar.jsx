@@ -26,7 +26,7 @@ const NavBar = () => {
         }
       </div>
 
-      <div className={styles.navigation__bar}>
+      <div className={isMenuOpen ? `${styles.navigation__bar__active} ${styles.navigation__bar}` : styles.navigation__bar}>
         <figure
           onClick={() => scrollToTop()}
           className={styles.logo}>

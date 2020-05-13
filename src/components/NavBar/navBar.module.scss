@@ -159,7 +159,7 @@
     margin-right: 7.5rem;
   }
 
-  @include respond(tab-port) {
+  @include respond(phone) {
     margin-right: 0;
     margin-top: -2rem;
   }

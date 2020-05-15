@@ -1,5 +1,6 @@
 @import '../abstract/variable';
 @import '../abstract/mixin';
+@import '../abstract/animation';
 
 .header {
   height: 100vh;
@@ -52,6 +53,18 @@
   @include respond(phone) {
     font-size: 3.8rem;
   }
+
+  &__main {
+    display: block;
+    -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  &__sub {
+    display: block;
+    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
 }
 
 .sectionFeatures {
@@ -101,6 +114,11 @@
   text-align: center;
   text-transform: uppercase;
 
+  &__animated {
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+
   @include respond(tab-port) {
     font-size: 4.3rem;
   }
@@ -117,7 +135,7 @@
     margin-top: 2rem;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(1);
     text-decoration: none;
     font-size: 1.7rem;
     color: #1a2021;
@@ -131,7 +149,11 @@
   &:hover,
   &:active {
     border-bottom: 1px solid #1a2021;
-    transform: translateX(-50%) translateY(-4px) scale(1.04);
+  }
+
+  &__animated {
+    -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+    animation: heartbeat 1.5s ease-in-out infinite both;
   }
 }
 
@@ -156,6 +178,11 @@
     text-align: center;
     color: #051014;
     margin-bottom: 2rem;
+
+    &__animated {
+      -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+      animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
 
     @include respond(tab-port) {
       font-size: 3.9rem;
@@ -224,6 +251,11 @@
   text-transform: uppercase;
   letter-spacing: 0.6px;
   margin-bottom: 4.8rem;
+
+  &__animated {
+    -webkit-animation: bounce-in-top 1s both;
+    animation: bounce-in-top 1s both;
+  }
 
   @include respond(phone) {
     font-size: 3.8rem;

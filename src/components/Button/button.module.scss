@@ -1,5 +1,6 @@
 @import '../../sass/abstract/variable';
 @import '../../sass/abstract/mixin';
+@import '../../sass/abstract/animation';
 
 .buttonFree,
 .buttonPremium {
@@ -28,6 +29,8 @@
   color: #fd7951;
   border: 2px solid #fd7951;
   margin-right: 2rem;
+  -webkit-animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in-fwd 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
   &:hover {
     color: #ed80c2;
@@ -39,6 +42,8 @@
   background-color: transparent;
   color: #3ee8ad;
   border: 2px solid #3ee8ad;
+  -webkit-animation: fade-in-bck 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in-bck 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
   &:hover {
     color: #19f6e8;

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Waypoint } from 'react-waypoint';
 
 import styles from './features.module.scss';
 
@@ -8,11 +9,19 @@ import { FaStar } from 'react-icons/fa';
 import { MdDashboard } from 'react-icons/md';
 
 const Features = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
   return (
     <div className="row">
-      <h2 className={styles.features__heading}>
-        Features We Provide You
+      <Waypoint
+        onEnter={() => setIsVisible(true)}
+      >
+        <h2 className={isVisible ?
+          `${styles.features__heading} ${styles.features__heading__animated}` :
+          `${styles.features__heading}`}>
+          Features We Provide You
         </h2>
+      </Waypoint>
       <ul className={styles.features__list}>
         <li className={styles.features__item}>
           <GoLocation className={styles.features__icon} />

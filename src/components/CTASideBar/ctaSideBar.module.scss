@@ -1,4 +1,5 @@
 @import '../../sass/abstract/mixin';
+@import '../../sass/abstract/animation';
 
 .cta {
   &__textWrapper {
@@ -20,6 +21,11 @@
     font-size: 4.4rem;
     font-weight: 500;
     margin-bottom: 1.8rem;
+
+    &__animated {
+      -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+      animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
   }
 
   &__paragraph {
@@ -28,6 +34,11 @@
     font-weight: 400;
     width: 90%;
     letter-spacing: 0.4px;
+
+    &__animated {
+      -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+      animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    }
 
     @include respond(tab-port) {
       margin-bottom: 2rem;
@@ -53,6 +64,11 @@
     border-radius: 5px;
     border: 2px solid #19f6e8;
     transition: all 0.2s linear;
+
+    &__animated {
+      -webkit-animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+      animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    }
 
     @include respond(mid) {
       margin: 5rem 0;

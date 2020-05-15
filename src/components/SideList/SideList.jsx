@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Waypoint } from 'react-waypoint';
 
 import styles from './sideList.module.scss';
 
 const SideList = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const modernLisiting = [
     {
       title: 'Music',
@@ -19,21 +21,32 @@ const SideList = () => {
     }
   ]
   return (
-    <div className={styles.list}>
-      <h2 className={styles.list__heading}>
-        What's on Melodify?
+    <Waypoint onEnter={() => setIsVisible(true)}>
+      <div className={styles.list}>
+        <h2 className={isVisible ?
+          `${styles.list__heading} ${styles.list__heading__animated}` :
+          `${styles.list__heading}`}
+        >
+          What's on Melodify?
       </h2>
-      {modernLisiting.map(({ title, description }) => (
-        <div key={title}>
-          <h3 className={styles.list__title}>
-            {title}
-          </h3>
-          <p className={styles.list__description}>
-            {description}
-          </p>
-        </div>
-      ))}
-    </div>
+        {modernLisiting.map(({ title, description }) => (
+          <div key={title}>
+            <h3 className={isVisible ?
+              `${styles.list__title} ${styles.list__title__animated}` :
+              `${styles.list__title}`}
+            >
+              {title}
+            </h3>
+            <p className={isVisible ?
+              `${styles.list__description} ${styles.list__description__animated}` :
+              `${styles.list__description}`}
+            >
+              {description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </Waypoint >
   );
 };
 

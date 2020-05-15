@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
+import React, { useState } from 'react';
+import { Waypoint } from 'react-waypoint';
 
 import styles from '../sass/layout/home.module.scss';
 
@@ -22,22 +23,29 @@ import { Form } from '../components/Form/Form';
 import { Footer } from '../components/Footer/Footer';
 
 const Home = () => {
+  const [isTestimonialVisible, setIsTestimonialVisible] = useState(false);
+  const [isPlansVisible, setIsPlansVisible] = useState(false);
+  const [isFormVisible, setIsFormVisibble] = useState(false);
   return (
     <>
       <header id="header" className={styles.header}>
         <NavBar />
         <div className={`${styles.mainWrapper}`}>
           <h1 className={styles.headerText}>
-            Your Very Own <br />
-            Personal Music Companion
+            <span className={styles.headerText__main}>
+              Your Very Own
+            </span>
+            <span className={styles.headerText__sub}>
+              Personal Music Companion
+            </span>
           </h1>
           <Button
             type="FREE">
             Get Melodify Free
           </Button>
-            <Button
-              type="PREMIUM">
-              Get Melodify Premium
+          <Button
+            type="PREMIUM">
+            Get Melodify Premium
           </Button>
         </div>
       </header>
@@ -60,19 +68,29 @@ const Home = () => {
           VideoSourceMp4={VideoSourceMp4}
           VideoSourceWebm={VideoSourceWebm}
         />
-
-        <h2 className={styles.testimonial__heading}>
+        <Waypoint onEnter={() => setIsTestimonialVisible(true)} />
+        <h2 className={isTestimonialVisible ?
+          `${styles.testimonial__heading} ${styles.testimonial__heading__animated}` :
+          `${styles.testimonial__heading}`}>
           We Make People Genuinely Happy
         </h2>
 
         <TestimonialBox
           customers={customers}
         />
-        <a href="#" className={styles.testimonial__readMore}>Read More Stories &rarr;</a>
+        <a href="#"
+          className={isTestimonialVisible ?
+            `${styles.testimonial__readMore} ${styles.testimonial__readMore__animated}` :
+            `${styles.testimonial__readMore}`}>
+          Read More Stories &rarr;
+        </a>
       </section>
 
       <section className={styles.sectionPlans}>
-        <h2 className={styles.plans__heading}>
+        <Waypoint onEnter={() => setIsPlansVisible(true)} />
+        <h2 className={isPlansVisible ?
+          `${styles.plans__heading} ${styles.plans__heading__animated}` :
+          `${styles.plans__heading}`}>
           Listen free or subscribe to Melodify Premium
         </h2>
         <div className={styles.plans__wrapper}>
@@ -93,7 +111,10 @@ const Home = () => {
 
       <section className={styles.sectionGetStarted}>
         <div className="row">
-          <h2 className={styles.formHeading}>
+          <Waypoint onEnter={() => setIsFormVisibble(true)} />
+          <h2 className={isFormVisible ?
+            `${styles.formHeading} ${styles.formHeading__animated}` :
+            `${styles.formHeading}`}>
             We're Glad To Hear From You
           </h2>
           <Form />

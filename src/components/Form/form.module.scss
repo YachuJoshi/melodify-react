@@ -130,6 +130,11 @@
     left: 51%;
   }
 
+  @include respond(smallest) {
+    bottom: 4rem;
+    left: 55%;
+  }
+
   &:hover {
     background-color: #3aa22b;
     transform: translateX(-50%) scale(1.05);

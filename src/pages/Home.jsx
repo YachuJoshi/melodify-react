@@ -39,14 +39,16 @@ const Home = () => {
               Personal Music Companion
             </span>
           </h1>
-          <Button
-            type="FREE">
-            Get Melodify Free
+          <div className={styles.header__buttons}>
+            <Button
+              type="FREE">
+              Get Melodify Free
           </Button>
-          <Button
-            type="PREMIUM">
-            Get Melodify Premium
+            <Button
+              type="PREMIUM">
+              Get Melodify Premium
           </Button>
+          </div>
         </div>
       </header>
 

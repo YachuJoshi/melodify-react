@@ -19,6 +19,10 @@ html {
   @include respond(tab-port) {
     font-size: 50%; // 1rem = 8px
   }
+
+  @include respond(smallest) {
+    font-size: 43.75%; // 1rem = 7px
+  }
 }
 
 body {

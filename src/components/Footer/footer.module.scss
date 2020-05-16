@@ -7,9 +7,18 @@
   color: #fff;
 
   @include respond(phone) {
-  padding: 4rem 0;
+    padding: 4rem 0;
+  }
+
+  &__row {
+    @include respond(smallest) {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
   }
 }
+
 
 .footer__aboutUsList {
   list-style: none;
@@ -19,6 +28,10 @@
   @include respond(mid) {
     font-size: 1.8rem;
     margin-left: 4rem;
+  }
+
+  @include respond(smallest) {
+    font-size: 2rem;
   }
 
   li {
@@ -49,6 +62,12 @@
     margin-right: 3rem;
   }
 
+  @include respond(smallest) {
+    float: none;
+    margin-right: 0;
+    margin-top: 4rem;
+  }
+
   li {
     &:not(:last-child) {
       margin-right: 2.6rem;
@@ -67,6 +86,10 @@
 
   @include respond(mid) {
     font-size: 2.2rem;
+  }
+
+  @include respond(smallest) {
+    font-size: 2.8rem;
   }
 
   &:hover {

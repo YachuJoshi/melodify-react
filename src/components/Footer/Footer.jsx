@@ -14,7 +14,7 @@ const Footer = () => {
   ]
   return (
     <footer className={styles.footer}>
-      <div className="row">
+      <div className={`row ${styles.footer__row}`}>
         <ul className={styles.footer__aboutUsList}>
           {footerItemList.map((item, index) => (
             <li key={index}>

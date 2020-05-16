@@ -33,6 +33,10 @@
       height: 12rem;
     }
 
+    @include respond(smallest) {
+      height: 14.5rem;
+    }
+
     &:hover {
       outline: 1rem solid #fff;
       transform: scale(1.12);

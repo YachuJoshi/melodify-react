@@ -32,12 +32,21 @@
     margin-left: 5%;
   }
 
+  @include respond(smallest) {
+    width: 80%;
+    margin-left: 10%;
+  }
+
   &__imageWrapper {
     flex: 0 1 50%;
     overflow: hidden;
 
     @include respond(phone) {
       flex: 0 1 25%;
+    }
+
+    @include respond(smallest) {
+      flex: 0 1 50%;
     }
   }
 
@@ -58,6 +67,10 @@
 
     @include respond(phone) {
       height: 18rem;
+    }
+
+    @include respond(smallest) {
+      height: 22rem;
     }
 
     &:hover {

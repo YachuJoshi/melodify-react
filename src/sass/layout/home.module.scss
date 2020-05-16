@@ -9,11 +9,20 @@
       rgba($color-primary-dark, 0.7)),
     url(../../img/hero-image.jpg);
   background-size: cover;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-position: center;
   font-family: 'Quicksand', sans-serif;
   color: #fff;
   position: relative;
+
+  &__buttons {
+    display: flex;
+
+    @include respond(smallest) {
+      width: 84%;
+      margin-left: 8%;
+    }
+  }
 }
 
 .mainWrapper {
@@ -34,6 +43,10 @@
   @include respond(phone) {
     max-width: 60rem;
   }
+
+  @include respond(smallest) {
+    max-width: 50rem;
+  }
 }
 
 .headerText {
@@ -52,6 +65,10 @@
 
   @include respond(phone) {
     font-size: 3.8rem;
+  }
+
+  @include respond(smallest) {
+    margin-left: 8%;
   }
 
   &__main {
@@ -74,6 +91,10 @@
   @include respond(tab-port) {
     padding: 7rem 0 5.5rem 0;
   }
+
+  @include respond(smallest) {
+    padding: 6rem 0 5rem 0;
+  }
 }
 
 .sectionNew {
@@ -90,6 +111,10 @@
     padding: 10rem 0;
   }
 
+  @include respond(smallest) {
+    padding: 9rem 0;
+  }
+
   &::after {
     content: "";
     display: table;
@@ -103,6 +128,10 @@
 
   @include respond(tab-port) {
     padding: 7rem 0 10rem 0;
+  }
+
+  @include respond(smallest) {
+    padding: 6rem 0 9rem 0;
   }
 }
 
@@ -125,6 +154,13 @@
 
   @include respond(phone) {
     font-size: 3.8rem;
+  }
+
+  @include respond(smallest) {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 3.6rem;
+    width: 90%;
   }
 }
 
@@ -168,6 +204,10 @@
   @include respond(tab-port) {
     padding: 7rem 0 10rem 0;
   }
+
+  @include respond(smallest) {
+    padding: 5.5rem 0 9rem 0;
+  }
 }
 
 .plans {
@@ -186,6 +226,12 @@
 
     @include respond(tab-port) {
       font-size: 3.9rem;
+    }
+
+    @include respond(smallest) {
+      font-size: 3.6rem;
+      width: 80%;
+      margin-bottom: 1.5rem;
     }
   }
 
@@ -216,6 +262,10 @@
   @include respond(phone) {
     padding: 7rem 0 9rem 0;
   }
+
+  @include respond(smallest) {
+    padding: 5.5rem 0 8rem 0;
+  }
 }
 
 .divCTA.row {
@@ -234,12 +284,16 @@
     url(../../img/form-bg-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-position: center;
   backface-visibility: hidden;
 
   @include respond(tab-port) {
     padding: 6rem 0 14rem 0;
+  }
+
+  @include respond(smallest) {
+    padding: 5rem 0 12rem 0;
   }
 }
 
@@ -259,5 +313,12 @@
 
   @include respond(phone) {
     font-size: 3.8rem;
+  }
+
+  @include respond(smallest) {
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 3.6rem;
+    width: 90%;
   }
 }

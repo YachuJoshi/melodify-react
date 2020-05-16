@@ -9,11 +9,15 @@
       rgba($color-primary-dark, 0.7)),
     url(../../img/hero-image.jpg);
   background-size: cover;
-  // background-attachment: fixed;
+  background-attachment: fixed;
   background-position: center;
   font-family: 'Quicksand', sans-serif;
   color: #fff;
   position: relative;
+
+  @include respond(phone) {
+    background-attachment: scroll;
+  }
 
   &__buttons {
     display: flex;
@@ -284,12 +288,16 @@
     url(../../img/form-bg-image.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  // background-attachment: fixed;
+  background-attachment: fixed;
   background-position: center;
   backface-visibility: hidden;
 
   @include respond(tab-port) {
     padding: 6rem 0 14rem 0;
+  }
+
+  @include respond(phone) {
+    background-attachment: scroll;
   }
 
   @include respond(smallest) {

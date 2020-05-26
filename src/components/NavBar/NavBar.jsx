@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from '@reach/router';
 
 import Logo from '../../img/melodify-logo.png';
 
@@ -35,8 +36,13 @@ const NavBar = () => {
         </figure>
         <nav className={styles.navigation}>
           <ul className={styles.navigation__list}>
+            <li className={styles.navigation__item}>
+              <Link
+                to="/webplayer"
+                className={styles.navigation__link}
+              >Web Player</Link>
+            </li>
             <li className={styles.navigation__item}>Premium</li>
-            <li className={styles.navigation__item}>Help</li>
             <li className={styles.navigation__item}>Download</li>
             <li className={styles.navigation__item}>Sign Up</li>
             <li className={styles.navigation__item}>Login</li>

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Waypoint } from 'react-waypoint';
 
-import styles from '../sass/layout/home.module.scss';
+import styles from '../sass/pages/home.module.scss';
 
 import { gallery, customers, plans, composition } from '../Data';
 

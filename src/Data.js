@@ -12,7 +12,45 @@ import SEL from './img/composition/sel.jpg';
 import CAMI from './img/composition/cami.jpg';
 import BRUNO from './img/composition/bruno.jpg';
 
+import IRENE from './img/topartist/irene.jpg';
+import IU from './img/topartist/iu.jpg';
+import JENNIE from './img/topartist/jennie.jpg';
+import JISOO from './img/topartist/jisoo.jpg';
+import LILI from './img/topartist/lili.jpg';
+import YEJI from './img/topartist/yeji.jpg';
+import LIA from './img/topartist/lia.png';
+
 export const gallery = [ImageOne, ImageTwo, ImageThree, ImageFour];
+export const TOP_ARTISTS = [
+  {
+    name: 'Irene',
+    url: IRENE
+  },
+  {
+    name: 'IU',
+    url: IU
+  },
+  {
+    name: 'Jennie',
+    url: JENNIE
+  },
+  {
+    name: 'Jisoo',
+    url: JISOO
+  },
+  {
+    name: 'Lili',
+    url: LILI
+  },
+  {
+    name: 'Yeji',
+    url: YEJI
+  },
+  {
+    name: 'Lia',
+    url: LIA
+  }
+];
 export const customers = [
   {
     name: 'Yeji',

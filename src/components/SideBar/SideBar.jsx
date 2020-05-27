@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
 import Logo from '../../img/melodify-logo.png';
 
@@ -29,8 +30,12 @@ const SideBar = () => {
         />
         <figcaption
           className={styles.logo__name}>
-          Melodify
-      </figcaption>
+          <Link 
+            to="/"
+            className={styles.logo__link}>
+            Melodify
+          </Link>
+        </figcaption>
       </figure>
 
       <div className={styles.recommend}>

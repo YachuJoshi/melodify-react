@@ -29,6 +29,15 @@
     font-weight: 600;
     font-size: 2rem;
   }
+
+  &__link {
+
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
 }
 
 .recommend,

@@ -1,0 +1,83 @@
+@import '../../sass/abstract/variable';
+
+.sidebar {
+  background-color: #f7f7f7;
+  position: fixed;
+  height: 100%;
+  min-width: 22rem;
+  z-index: 20;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  // justify-content: space-evenly;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+
+  &__image {
+    height: 5rem;
+    margin-right: 0.8rem;
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+}
+
+.recommend,
+.library {
+  padding: 2rem 0;
+
+  &__heading {
+    text-align: left;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fa0000;
+    margin-bottom: 1.6rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    &:not(:last-child) {
+      margin-bottom: 1.4rem;
+    }
+
+    &__active {
+      color: $color-main;
+    }
+
+    &:hover {
+      color: $color-main;
+      transform: scale(1.08) translateY(-2px);
+    }
+
+    &:active {
+      transform: scale(1.08) translateY(2px);
+    }
+  }
+
+  &__icon {
+    font-size: 2.1rem;
+    margin-right: 1rem;
+  }
+
+  &__text {
+    font-size: 1.6rem;
+  }
+}

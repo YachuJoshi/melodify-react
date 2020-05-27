@@ -10,88 +10,6 @@
   grid-template-columns: [sidebar-start] 22rem [sidebar-end full-start] 5rem [center-start] repeat(2, [col-start] 1fr [col-end]) [center-end] 5rem [full-end];
 }
 
-/* SIDEBAR */
-
-.sidebar {
-  background-color: #f7f7f7;
-  position: fixed;
-  height: 100%;
-  min-width: 22rem;
-  z-index: 20;
-
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-
-  &__image {
-    height: 5rem;
-    margin-right: 0.8rem;
-  }
-
-  &__name {
-    font-weight: 400;
-    font-size: 2rem;
-  }
-}
-
-.recommend,
-.library {
-  padding: 4rem 0 0 0;
-
-  &__heading {
-    text-align: left;
-    font-size: 2.2rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #fa0000;
-    margin-bottom: 1.6rem;
-  }
-
-  &__list {
-    list-style: none;
-  }
-
-  &__item {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.2s linear;
-
-    &:not(:last-child) {
-      margin-bottom: 1.4rem;
-    }
-
-    &__active {
-      color: $color-main;
-    }
-
-    &:hover {
-      color: $color-main;
-      transform: scale(1.08) translateY(-2px);
-    }
-
-    &:active {
-      transform: scale(1.08) translateY(2px);
-    }
-  }
-
-  &__icon {
-    font-size: 2.1rem;
-    margin-right: 1rem;
-  }
-
-  &__text {
-    font-size: 1.6rem;
-  }
-}
-
-
 .header {
   height: 50vh;
   grid-column: full-start / full-end;
@@ -101,11 +19,6 @@
   background-image: url(../../img/headphones.jpg);
   background-size: cover;
   background-position: center center;
-}
-
-.weeklytracks {
-  height: 250px;
-  grid-column: center-start / center-end;
 }
 
 .topcharts {

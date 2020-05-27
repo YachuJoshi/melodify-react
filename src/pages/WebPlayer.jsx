@@ -7,6 +7,8 @@ import { WeeklyTracks } from '../components/WeeklyTracks/WeeklyTracks';
 import { TopArtists } from '../components/TopArtists/TopArtists';
 import { Genres } from '../components/Genres/Genres';
 
+import { MainPlayer } from '../components/MainPlayer/MainPlayer';
+
 import { TOP_ARTISTS } from '../Data';
 import { GENRES } from '../Data';
 
@@ -17,15 +19,14 @@ const WebPlayerPage = () => {
         <SideBar />
         <header className={styles.header}></header>
         <WeeklyTracks />
-        <div className={styles.topcharts}>Top Charts</div>
         <TopArtists
           TopArtistsList={TOP_ARTISTS}
         />
         <Genres
           GenresList={GENRES}
         />
+        <MainPlayer />
       </div>
-      <div className={styles.player}>Player</div>
     </>
   );
 };

@@ -1,8 +1,8 @@
 @import '../../sass/abstract/variable';
 
 .genres {
-  padding-top: 2rem;
   grid-column: col-start 2 / center-end;
+  margin-top: -4rem;
 
   &__typo {
     display: flex;
@@ -54,6 +54,7 @@
     border-radius: 2rem;
     overflow: hidden;
     position: relative;
+    box-shadow: 0 1rem 2rem rgba(#000, 0.20);
   }
 
   &__image {

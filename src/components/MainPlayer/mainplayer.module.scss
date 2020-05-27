@@ -1,0 +1,103 @@
+@import '../../sass/abstract/variable';
+
+.topcharts {
+  grid-column: center-start / col-end 1;
+  grid-row: 3 / 5;
+  padding-bottom: 4rem;
+
+  &__heading {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
+
+.songs__collection {
+  display: flex;
+  flex-flow: column;
+}
+
+.wrapper {
+  text-transform: capitalize;
+  letter-spacing: 0.6px;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  cursor: pointer;
+  border: 1px solid #4c5172;
+  border-radius: 10px;
+  padding: 1rem 0 1rem 4rem;
+  width: 90%;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &:hover {
+    background-color: #bdcae9;
+  }
+}
+
+.song__name {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.song__artist {
+  font-size: 1.4rem;
+}
+
+.song__icons {
+  position: absolute;
+  right: 3rem;
+  top: 2rem;
+  font-size: 1.8rem;
+}
+
+.icon {
+  &__love {
+    margin-right: 0.5rem;
+
+    &__active {
+      color: #ff0c0c;
+    }
+  }
+
+  &__check {
+    color: green;
+  }
+}
+
+.musicplayer {
+  grid-row: 5 / 6;
+}
+
+.sDetails {
+  position: absolute;
+  top: 50%;
+  left: 4rem;
+  transform: translateY(-50%);
+}
+
+.sName {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.sArtist {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.sPlayer {
+  padding: 2rem 0;
+  background-color: #ffcbb9;
+  color: $color-default;
+  position: fixed;
+  bottom: 0;
+  z-index: 30;
+  width: 100%;
+  font-weight: bold;
+}

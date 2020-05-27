@@ -4,7 +4,6 @@ import React from 'react';
 import styles from './genres.module.scss';
 
 const Genres = ({ GenresList }) => {
-  console.log(GenresList);
   return (
     <div className={styles.genres}>
       <div className={styles.genres__typo}>

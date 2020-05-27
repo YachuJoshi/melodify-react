@@ -20,7 +20,41 @@ import LILI from './img/topartist/lili.jpg';
 import YEJI from './img/topartist/yeji.jpg';
 import LIA from './img/topartist/lia.png';
 
+import RETRO from './img/genres/retro.jpg';
+import ROMANCE from './img/genres/romance.jpg';
+import PARTY from './img/genres/party.jpg';
+import DANCE from './img/genres/dance.jpg';
+import DJ_REMIX from './img/genres/dj_remix.jpg';
+import EDM from './img/genres/edm.jpg';
+
 export const gallery = [ImageOne, ImageTwo, ImageThree, ImageFour];
+export const GENRES = [
+  {
+    type: 'Retro',
+    url: RETRO
+  },
+  {
+    type: 'Romance',
+    url: ROMANCE
+  },
+  {
+    type: 'Party',
+    url: PARTY
+  },
+  {
+    type: 'Dance',
+    url: DANCE
+  },
+  {
+    type: 'DJ Remix',
+    url: DJ_REMIX
+  },
+  {
+    type: 'EDM',
+    url: EDM
+  }
+];
+
 export const TOP_ARTISTS = [
   {
     name: 'Irene',

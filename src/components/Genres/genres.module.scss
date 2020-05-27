@@ -1,13 +1,13 @@
 @import '../../sass/abstract/variable';
 
-.topartists {
+.genres {
+  padding-top: 2rem;
   grid-column: col-start 2 / center-end;
-  grid-row: 3 / 4;
 
   &__typo {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
   }
 
   &__heading {
@@ -37,60 +37,58 @@
     &:active {
       transform: scale(1.02) translateY(2px);
     }
-
   }
 
-  &__imagecontainer {
+  &__container {
     display: flex;
-    justify-content: center;
-    margin-bottom: 3rem;
+    flex-flow: row wrap;
+    align-items: center;
   }
 
   figure {
     cursor: pointer;
-    position: relative;
-    transition: all 0.2s ease-out;
-    height: 7.5rem;
-    width: 7.5rem;
-    border-radius: 10rem;
-    box-shadow: 0.4rem 0.5rem 1rem rgba(#000, 0.24);
+    margin-left: 3%;
+    flex: 0 1 29.33%;
+    height: 12.6rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
     overflow: hidden;
-
-    &:not(:last-child) {
-      margin-right: 2%;
-    }
-
-    &:hover img {
-      transform: scale(1);
-      filter: blur(2px) brightness(80%);
-    }
-
-    &:hover figcaption {
-      opacity: 1;
-      transform: translate(-50%, -50%);
-    }
+    position: relative;
   }
 
   &__image {
     height: 100%;
-    transform: scale(1.08);
-    backface-visibility: hidden;
+    width: 100%;
+    filter: brightness(80%);
+    transform: scale(1.12);
     transition: all 0.5s ease-out;
   }
 
-  &__name {
-    font-family: 'Roboto', sans-serif;
+  &__typeholder {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 0%);
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-    letter-spacing: 0.6px;
-    text-align: center;
-    opacity: 0;
-    backface-visibility: hidden;
+    transform: translate(-50%, -50%);
+    background-color: rgba(#fff, 0.75);
+    color: #000;
+    z-index: 20;
+    padding: 2rem 3rem;
+    border-radius: 2rem;
     transition: all 0.5s ease-out;
+  }
+
+  &__type {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  figure:hover &__typeholder {
+    transform: translate(-50%, -50%) scale(1.06);
+    background-color: rgba(#fff, 0.90);
+
+  }
+
+  figure:hover &__image {
+    transform: scale(1);
   }
 }

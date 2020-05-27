@@ -10,7 +10,6 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  // justify-content: space-evenly;
 }
 
 .logo {
@@ -90,4 +89,14 @@
   &__text {
     font-size: 1.6rem;
   }
+}
+
+.copy__text {
+  position: absolute;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  width: 80%;
+  font-weight: 600;
+  text-align: center;
+  bottom: 10rem;
 }

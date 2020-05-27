@@ -30,7 +30,7 @@ const SideBar = () => {
         />
         <figcaption
           className={styles.logo__name}>
-          <Link 
+          <Link
             to="/"
             className={styles.logo__link}>
             Melodify
@@ -104,7 +104,9 @@ const SideBar = () => {
 
         </ul>
       </div>
-
+      <h3 className={styles.copy__text}>
+        Copyright © 2020 by Yachu Joshi
+      </h3>
     </div>
   );
 };

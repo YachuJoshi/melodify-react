@@ -66,6 +66,9 @@ const Player = ({ handleMusicShuffle, src }) => {
       return;
     }
     window.addEventListener('keydown', togglePausePlay);
+    window.onkeydown = function (event) {
+      return !(event.keyCode === 32);
+    };
     return () => window.removeEventListener('keydown', togglePausePlay);
   }, [handlePause, handlePlay, isPlaying]);
 

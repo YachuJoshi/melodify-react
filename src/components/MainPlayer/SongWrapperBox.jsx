@@ -9,11 +9,12 @@ const SongWrapperBox = ({ song, index, handleMusicChange }) => {
   const [favourite, setFavourite] = useState(false);
   const [addedToList, setAddedToList] = useState(false);
   return (
-    <div
-      className={styles.wrapper}
-      onClick={() => handleMusicChange(index)}>
-      <div className={styles.song__name}>{song.Title}</div>
-      <div className={styles.song__artist}>{song.Artist}</div>
+    <div className={styles.wrapper}>
+      <div className={styles.song__details}
+        onClick={() => handleMusicChange(index)}>
+        <div className={styles.song__name}>{song.Title}</div>
+        <div className={styles.song__artist}>{song.Artist}</div>
+      </div>
       <div className={styles.song__icons}>
         {
           favourite ?

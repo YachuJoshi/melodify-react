@@ -21,7 +21,21 @@
   background-size: cover;
   background-position: center center;
 
-  @include respond(mid) {
+  @include respond(tab-port) {
     height: 40vh;
+  }
+}
+
+.copyright {
+  display: none;
+  grid-column: center-start / center-end;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: -3rem;
+
+  @include respond(tab-port) {
+    display: inline-block;
   }
 }

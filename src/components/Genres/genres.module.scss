@@ -3,10 +3,14 @@
 
 .genres {
   grid-column: col-start 2 / center-end;
-  margin-top: -14rem;
+  margin-top: -8rem;
 
   @include respond(tab-port) {
-    margin-top: 0;
+    margin-top: -4rem;
+  }
+
+  @include respond(mid) {
+    margin-top: -3rem;
   }
 
   &__typo {

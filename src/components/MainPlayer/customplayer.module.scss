@@ -1,4 +1,5 @@
 @import '../../sass/abstract/variable';
+@import '../../sass/abstract/mixin';
 
 .real__player {
   display: none;
@@ -66,7 +67,15 @@
 .music__controller {
   display: flex;
   align-items: center;
-  margin-left: 92px;
+  margin-left: 9.2rem;
+
+  @include respond(tab-port) {
+    margin-left: 7rem;
+  }
+
+  @include respond(tab-port) {
+    margin-left: 4rem;
+  }
 }
 
 .buttonPause,
@@ -178,5 +187,9 @@
     z-index: 20;
     background-color: $color-default;
     transform: translateX(-8.5px);
+
+    @include respond(tab-port) {
+      top: 2.7rem;
+    }
   }
 }

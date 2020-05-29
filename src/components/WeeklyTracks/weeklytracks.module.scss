@@ -23,9 +23,9 @@
   &__container {
     display: flex;
     justify-content: center;
+    flex-flow: row wrap;
 
     @include respond(tab-port) {
-      flex-flow: row wrap;
       margin-left: 3.5rem;
     }
   }
@@ -35,10 +35,11 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2.2rem;
+    margin-right: 1rem;
 
     @include respond(tab-port) {
       margin-right: 4rem;
-      margin-bottom: 2.2rem;
     }
 
     &:not(:last-child) {
@@ -59,10 +60,6 @@
 
     &:hover {
       transform: scale(1.04);
-    }
-
-    @include respond(tab-land) {
-      height: 15rem;
     }
 
     @include respond(tab-port) {

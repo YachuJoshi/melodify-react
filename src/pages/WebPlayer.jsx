@@ -26,6 +26,9 @@ const WebPlayerPage = () => {
           GenresList={GENRES}
         />
         <MainPlayer />
+        <span className={styles.copyright}>
+          Copyright © 2020 by Yachu Joshi. All Rights Reserved  
+        </span>
       </div>
     </>
   );

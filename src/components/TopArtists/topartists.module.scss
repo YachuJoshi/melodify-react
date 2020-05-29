@@ -3,12 +3,19 @@
 
 .topartists {
   grid-column: col-start 2 / center-end;
-  grid-row: 3 / 4;
+
+  @include respond(phone) {
+    grid-column: center-start / center-end;
+  }
 
   &__typo {
     display: flex;
     align-items: center;
     margin-bottom: 2rem;
+
+    @include respond(phone) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__heading {
@@ -66,8 +73,17 @@
       width: 6.5rem;
     }
 
+    @include respond(phone) {
+      height: 7.5rem;
+      width: 7.5rem;
+    }
+
     &:not(:last-child) {
       margin-right: 2%;
+
+      @include respond(phone) {
+        margin-right: 3%;
+      }
     }
 
     &:hover img {

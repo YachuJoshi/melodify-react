@@ -65,6 +65,10 @@
     @include respond(tab-port) {
       height: 20rem;
     }
+    
+    @include respond(phone) {
+      height: 22rem;
+    }
   }
 
   &__title {

@@ -76,6 +76,10 @@
   @include respond(tab-port) {
     margin-left: 4rem;
   }
+
+  @include respond(phone) {
+    margin-left: 2rem;
+  }
 }
 
 .buttonPause,
@@ -107,6 +111,10 @@
   margin-top: 10px;
   width: 36%;
   position: relative;
+
+  @include respond(mid) {
+    width: 50%;
+  }
 
   &__bar {
     cursor: pointer;

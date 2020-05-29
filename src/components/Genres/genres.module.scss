@@ -13,10 +13,20 @@
     margin-top: -3rem;
   }
 
+  @include respond(phone) {
+    grid-column: center-start / center-end;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
   &__typo {
     display: flex;
     align-items: center;
     margin-bottom: 1.8rem;
+
+    @include respond(phone) {
+      margin-bottom: 2.5rem;
+    }
   }
 
   &__heading {
@@ -73,6 +83,13 @@
       margin-left: 2%;
       flex: 0 1 47%;
       margin-bottom: 1rem;
+    }
+
+    @include respond(phone) {
+      height: 13.6rem;
+      margin-left: 4%;
+      flex: 0 1 44%;
+      margin-bottom: 2rem;
     }
   }
 

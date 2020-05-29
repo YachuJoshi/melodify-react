@@ -13,6 +13,15 @@
   align-items: center;
 }
 
+.link {
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -33,15 +42,6 @@
   &__name {
     font-weight: 600;
     font-size: 2rem;
-  }
-
-  &__link {
-
-    &:link,
-    &:visited {
-      text-decoration: none;
-      color: inherit;
-    }
   }
 }
 

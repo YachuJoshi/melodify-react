@@ -20,23 +20,21 @@ import styles from './sidebar.module.scss';
 const SideBar = () => {
   return (
     <div className={styles.sidebar}>
-      <figure
-        className={styles.logo}
-      >
-        <img
-          src={Logo}
-          alt="Logo"
-          className={styles.logo__image}
-        />
-        <figcaption
-          className={styles.logo__name}>
-          <Link
-            to="/"
-            className={styles.logo__link}>
+      <Link to="/" className={styles.link}>
+        <figure
+          className={styles.logo}
+        >
+          <img
+            src={Logo}
+            alt="Logo"
+            className={styles.logo__image}
+          />
+          <figcaption
+            className={styles.logo__name}>
             Melodify
-          </Link>
-        </figcaption>
-      </figure>
+          </figcaption>
+        </figure>
+      </Link>
 
       <div className={styles.recommend}>
 

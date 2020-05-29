@@ -1,9 +1,9 @@
 @import '../../sass/abstract/variable';
+@import '../../sass/abstract/mixin';
 
 .topartists {
   grid-column: col-start 2 / center-end;
   grid-row: 3 / 4;
-  height: 3rem;
 
   &__typo {
     display: flex;
@@ -44,6 +44,11 @@
   &__imagecontainer {
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
+
+    @include respond(tab-port) {
+      flex-flow: row wrap;
+    }
   }
 
   figure {
@@ -55,6 +60,11 @@
     border-radius: 10rem;
     box-shadow: 0.4rem 0.5rem 1rem rgba(#000, 0.24);
     overflow: hidden;
+
+    @include respond(mid) {
+      height: 6rem;
+      width: 6rem;
+    }
 
     &:not(:last-child) {
       margin-right: 2%;

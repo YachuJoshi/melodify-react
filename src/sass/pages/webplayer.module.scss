@@ -8,6 +8,10 @@
   display: grid;
   grid-template-rows: repeat(4, min-content) 10rem;
   grid-template-columns: [sidebar-start] 22rem [sidebar-end full-start] 5rem [center-start] repeat(2, [col-start] 1fr [col-end]) [center-end] 5rem [full-end];
+
+  @include respond(mid) {
+    grid-template-columns: [sidebar-start] 22rem [sidebar-end full-start] 2rem [center-start] repeat(2, [col-start] 1fr [col-end]) [center-end] 2rem [full-end];
+  }
 }
 
 .header {
@@ -16,4 +20,8 @@
   background-image: url(../../img/headphones.jpg);
   background-size: cover;
   background-position: center center;
+
+  @include respond(mid) {
+    height: 40vh;
+  }
 }

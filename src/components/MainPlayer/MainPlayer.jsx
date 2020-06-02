@@ -16,7 +16,7 @@ const MainPlayer = () => {
     setLoading(true);
     axios({
       method: "GET",
-      url: "http://localhost:1337/music-lists"
+      url: "https://melodify-music-app.herokuapp.com/music-lists"
     }).then(res => {
       setLoading(false);
       setSongsList(res.data);

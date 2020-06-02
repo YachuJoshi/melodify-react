@@ -43,6 +43,7 @@ const Player = ({ handleMusicShuffle, src }) => {
     const element = document.querySelector('#progressIndicator');
     const maxX = element.clientWidth;
     setFraction((event.nativeEvent.offsetX / maxX) * 100);
+    if (isNaN(playerEl.current.duration)) return;
     playerEl.current.currentTime = (event.nativeEvent.offsetX / maxX) * playerEl.current.duration;
 
     if (!isPlaying) {

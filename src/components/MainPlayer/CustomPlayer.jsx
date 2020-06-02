@@ -1,5 +1,5 @@
 import React from 'react';
-import { IoMdPause, IoMdPlay, IoMdShuffle } from 'react-icons/io';
+import { IoMdPause, IoMdPlay } from 'react-icons/io';
 import { AiFillStepForward, AiFillStepBackward, AiOutlineBackward, AiOutlineForward } from 'react-icons/ai';
 import { MdVolumeDown, MdVolumeUp } from 'react-icons/md';
 
@@ -45,30 +45,24 @@ const CustomPlayer = ({
   return (
     <>
       <div className={styles.player__container}>
-
         <div className={styles.controls}>
-          <IoMdShuffle
-            className={styles.controls__shuffle}
+          <AiFillStepBackward
+            onClick={() => handleMusicShuffle('PREVIOUS')}
+            className={styles.controls__skipback}
           />
-          <div className={styles.music__controller}>
-            <AiFillStepBackward
-              onClick={() => handleMusicShuffle('PREVIOUS')}
-              className={styles.controls__skipback}
-            />
-            <AiOutlineBackward
-              onClick={() => seekBack(5)}
-              className={styles.controls__seekback}
-            />
-            {pausePlayElem}
-            <AiOutlineForward
-              onClick={() => seekForward(5)}
-              className={styles.controls__seekforward}
-            />
-            <AiFillStepForward
-              onClick={() => handleMusicShuffle('NEXT')}
-              className={styles.controls__skipforward}
-            />
-          </div>
+          <AiOutlineBackward
+            onClick={() => seekBack(5)}
+            className={styles.controls__seekback}
+          />
+          {pausePlayElem}
+          <AiOutlineForward
+            onClick={() => seekForward(5)}
+            className={styles.controls__seekforward}
+          />
+          <AiFillStepForward
+            onClick={() => handleMusicShuffle('NEXT')}
+            className={styles.controls__skipforward}
+          />
         </div>
 
         <div

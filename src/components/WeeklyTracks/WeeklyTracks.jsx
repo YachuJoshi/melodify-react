@@ -12,7 +12,7 @@ const WeeklyTracks = () => {
     setLoading(true);
     axios({
       method: 'GET',
-      url: 'https://melodify-music-app.herokuapp.com/weekly-top-tracks'
+      url: 'https://melodify-music.herokuapp.com/weekly-top-tracks'
     }).then(res => {
       setLoading(false);
       setError(false);
@@ -31,22 +31,22 @@ const WeeklyTracks = () => {
         Weekly Top Tracks
       </h1>
       <div className={styles.weeklytracks__container}>
-        {weeklyTracks.map(({ artist, title, image }) => (
+        {weeklyTracks.map(({ Artist, Title, Image }) => (
           <div
-            key={title}
+            key={Title}
             className={styles.weeklytracks__details}>
             <figure>
               <img
-                src={`https://melodify-music-app.herokuapp.com${image.url}`}
+                src={Image[0].url}
                 alt="Weekly Track"
                 className={styles.weeklytracks__image}
               />
             </figure>
             <div className={styles.weeklytracks__title}>
-              {title}
+              {Title}
             </div>
             <div className={styles.weeklytracks__artist}>
-              {artist}
+              {Artist}
             </div>
           </div>
         ))}

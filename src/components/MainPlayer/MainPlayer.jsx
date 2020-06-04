@@ -16,7 +16,7 @@ const MainPlayer = () => {
     setLoading(true);
     axios({
       method: "GET",
-      url: "https://melodify-music.herokuapp.com/music-lists"
+      url: "https://melodify-audio.herokuapp.com/music-lists"
     }).then(res => {
       setLoading(false);
       setSongsList(res.data);
@@ -85,7 +85,7 @@ const MainPlayer = () => {
             <CustomPlayerContainer
               handleMusicShuffle={handleMusicShuffle}
               key={song.Title}
-              url={song.Song.url}
+              url={song.Song[0].url}
             />
           </div>
         ))}

@@ -12,7 +12,7 @@ const WeeklyTracks = () => {
     setLoading(true);
     axios({
       method: 'GET',
-      url: 'https://melodify-music.herokuapp.com/weekly-top-tracks'
+      url: 'https://melodify-audio.herokuapp.com/weekly-top-tracks'
     }).then(res => {
       setLoading(false);
       setError(false);

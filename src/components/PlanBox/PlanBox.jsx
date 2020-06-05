@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@reach/router';
 
 import styles from './planBox.module.scss';
 
@@ -32,9 +33,11 @@ const PlanBox = ({ plans }) => {
           ))}
         </ul>
         {title === 'Free' ?
-          <button className={styles.plans__buttonFree}>
-            Get Free
-          </button> :
+          <Link to="/webplayer">
+            <button className={styles.plans__buttonFree}>
+              Get Free
+          </button>
+          </Link> :
           <button className={styles.plans__buttonPremium}>
             Get Premium
           </button>}

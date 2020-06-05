@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
+import { Link } from '@reach/router';
 import { Waypoint } from 'react-waypoint';
 
 import styles from '../sass/pages/home.module.scss';
@@ -40,10 +41,12 @@ const Home = () => {
             </span>
           </h1>
           <div className={styles.header__buttons}>
-            <Button
-              type="FREE">
-              Get Melodify Free
-          </Button>
+            <Link to="/webplayer">
+              <Button
+                type="FREE">
+                Get Melodify Free
+            </Button>
+            </Link>
             <Button
               type="PREMIUM">
               Get Melodify Premium

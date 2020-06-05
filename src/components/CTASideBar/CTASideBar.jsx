@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from '@reach/router';
 
 import styles from './ctaSideBar.module.scss';
 import { Waypoint } from 'react-waypoint';
@@ -19,12 +20,14 @@ const CTASideBar = () => {
           Over 30 million tracks; thousands of curated playlists; Discover Weekly; Melodify Running;
           Radio; Chromecast, sound system, car, TV and PlayStation intregation; sharing and creating playlists
           with your friends... All of this is ready for you.
-      </p>
-        <button className={isCtaVisible ?
-          `${styles.cta__button} ${styles.cta__button__animated}` :
-          `${styles.cta__button}`}>
-          Get Started
-      </button>
+        </p>
+        <Link to="/webplayer">
+          <button className={isCtaVisible ?
+            `${styles.cta__button} ${styles.cta__button__animated}` :
+            `${styles.cta__button}`}>
+            Get Started
+        </button>
+        </Link>
       </div>
     </Waypoint>
   );

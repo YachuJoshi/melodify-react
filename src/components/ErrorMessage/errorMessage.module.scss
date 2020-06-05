@@ -1,0 +1,15 @@
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__message {
+    font-size: 1.8rem;
+    margin-right: 1rem;
+  }
+
+  &__icon {
+    font-size: 3rem;
+    color: #4c5172;
+  }
+}

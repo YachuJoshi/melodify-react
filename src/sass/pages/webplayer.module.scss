@@ -50,4 +50,8 @@
   @include respond(phone) {
     margin-top: -2rem;
   }
+
+  @include respond(tiny) {
+    margin-top: -8.2rem;
+  }
 }

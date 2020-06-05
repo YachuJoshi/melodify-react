@@ -3,7 +3,6 @@
 
 .genres {
   grid-column: col-start 2 / center-end;
-  margin-top: -8rem;
 
   @include respond(tab-port) {
     margin-top: -4rem;

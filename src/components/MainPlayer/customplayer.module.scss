@@ -10,6 +10,11 @@
   justify-content: space-evenly;
   align-items: center;
   margin-left: 14rem;
+
+  @include respond(tiny) {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
 }
 
 .controls {
@@ -32,6 +37,10 @@
 
   @include respond(phone) {
     margin-left: 6rem;
+  }
+
+  @include respond(tiny) {
+    margin-left: 0;
   }
 
   &__skipback,
@@ -177,6 +186,10 @@
       width: 1.7rem;
       top: 5.1px;
     }
+
+    @include respond(tiny) {
+      top: 6.9px;
+    }
   }
 }
 
@@ -188,6 +201,10 @@
   align-items: center;
   width: 6%;
   position: relative;
+
+  @include respond(tiny) {
+    width: 10%;
+  }
 
   &__bar {
     cursor: pointer;
@@ -226,6 +243,10 @@
 
     @include respond(tab-port) {
       top: 2.7rem;
+    }
+
+    @include respond(tiny) {
+      top: 2.8rem;
     }
   }
 }

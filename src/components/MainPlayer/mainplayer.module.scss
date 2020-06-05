@@ -16,6 +16,10 @@
     padding-bottom: 4rem;
   }
 
+  @include respond(tiny) {
+    padding-bottom: 10rem;
+  }
+
   &__heading {
     font-size: 2.4rem;
     font-weight: 600;
@@ -111,16 +115,30 @@
   @include respond(phone) {
     left: 3rem;
   }
+
+  @include respond(tiny) {
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%) translateY(-50%);
+  }
 }
 
 .sName {
   font-size: 1.8rem;
   font-weight: 600;
+
+  @include respond(tiny) {
+    font-size: 2rem;
+  }
 }
 
 .sArtist {
   font-size: 1.6rem;
   font-weight: 600;
+
+  @include respond(tiny) {
+    font-size: 1.8rem;
+  }
 }
 
 .sPlayer {
@@ -132,4 +150,8 @@
   z-index: 30;
   width: 100%;
   font-weight: bold;
+
+  @include respond(tiny) {
+    height: 12rem;
+  }
 }

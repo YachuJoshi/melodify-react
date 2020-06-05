@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { CustomPlayerContainer } from './CustomPlayerContainer';
 import { SongWrapperBox } from './SongWrapperBox';
+import { LoadingSpinner } from '../LoadingSpinner/LoadingSpinner';
+import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 
 import styles from './mainplayer.module.scss';
 
@@ -23,7 +25,6 @@ const MainPlayer = () => {
     }).catch(err => {
       setLoading(false);
       setError(true);
-      console.error(err);
     });
   }, []);
 
@@ -62,8 +63,8 @@ const MainPlayer = () => {
         <h1 className={styles.topcharts__heading}>
           Billborad Top Charts
       </h1>
-        {loading && <span>Loading... <span role="img" aria-label="Haha">🥳</span> </span>}
-        {error && <span>Oops.. Something Went Wrong...</span>}
+        {loading && <LoadingSpinner />}
+        {error && <ErrorMessage />}
         <div className={styles.songs__collection}>
           {songsList.map((song, index) => (
             <SongWrapperBox

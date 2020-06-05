@@ -2,10 +2,17 @@
 @import '../../sass/abstract/mixin';
 
 .topartists {
+  max-height: 8rem;
   grid-column: col-start 2 / center-end;
+  margin-bottom: 3rem;
 
   @include respond(phone) {
     grid-column: center-start / center-end;
+  }
+
+  @include respond(tab-port) {
+    max-height: 12rem;
+    margin-bottom: 6rem;
   }
 
   &__typo {
@@ -76,6 +83,11 @@
     @include respond(phone) {
       height: 7.5rem;
       width: 7.5rem;
+    }
+
+    @include respond(smallest) {
+      height: 6rem;
+      width: 6rem;
     }
 
     &:not(:last-child) {

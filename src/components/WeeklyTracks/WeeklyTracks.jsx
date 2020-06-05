@@ -3,6 +3,9 @@ import axios from 'axios';
 
 import styles from './weeklytracks.module.scss';
 
+import { LoadingSpinner } from '../LoadingSpinner/LoadingSpinner';
+import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
+
 const WeeklyTracks = () => {
   const [weeklyTracks, setWeeklyTracks] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -25,11 +28,11 @@ const WeeklyTracks = () => {
 
   return (
     <div className={styles.weeklytracks}>
-      {loading && <span>Loading...</span>}
-      {error && <span>Error...</span>}
       <h1 className={styles.weeklytracks__heading}>
         Weekly Top Tracks
       </h1>
+      {loading && <LoadingSpinner />}
+      {error && <ErrorMessage />}
       <div className={styles.weeklytracks__container}>
         {weeklyTracks.map(({ Artist, Title, Image }) => (
           <div

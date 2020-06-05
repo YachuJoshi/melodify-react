@@ -23,6 +23,10 @@ html {
   @include respond(smallest) {
     font-size: 43.75%; // 1rem = 7px
   }
+
+  @include respond(tiny) {
+    font-size: 37.5%; // 1rem = 6px
+  }
 }
 
 body {
@@ -30,10 +34,6 @@ body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
 }
-
-// * {
-//   border: 1px solid red !important;
-// }
 
 .row {
   max-width: 114rem;

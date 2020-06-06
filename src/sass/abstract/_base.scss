@@ -12,6 +12,10 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 
+  @include respond(min-big-desktop) {
+    font-size: 75%; // 1rem = 12px
+  }
+
   @include respond(tab-land) {
     font-size: 56.25%; // 1rem = 9px
   }

@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Link } from '@reach/router';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import Logo from '../../img/melodify-logo.png';
+import Logo from "../../img/melodify-logo.png";
 
-import styles from './navBar.module.scss';
+import styles from "./navBar.module.scss";
 
 const NavBar = () => {
   const scrollToTop = () => {
-    let element = document.querySelector('#header');
+    let element = document.querySelector("#header");
     element.scrollIntoView();
-  }
+  };
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -21,26 +21,30 @@ const NavBar = () => {
           setIsMenuOpen(!isMenuOpen);
         }}
       >
-        {isMenuOpen ?
-          <span className={styles.navigation__icon_close}>&nbsp;</span> :
+        {isMenuOpen ? (
+          <span className={styles.navigation__icon_close}>&nbsp;</span>
+        ) : (
           <span className={styles.navigation__icon_menu}>&nbsp;</span>
-        }
+        )}
       </div>
 
-      <div className={isMenuOpen ? `${styles.navigation__bar__active} ${styles.navigation__bar}` : styles.navigation__bar}>
-        <figure
-          onClick={() => scrollToTop()}
-          className={styles.logo}>
+      <div
+        className={
+          isMenuOpen
+            ? `${styles.navigation__bar__active} ${styles.navigation__bar}`
+            : styles.navigation__bar
+        }
+      >
+        <figure onClick={() => scrollToTop()} className={styles.logo}>
           <img src={Logo} alt="Logo" className={styles.logo__image} />
           <figcaption className={styles.logo__name}>Melodify</figcaption>
         </figure>
         <nav className={styles.navigation}>
           <ul className={styles.navigation__list}>
             <li className={styles.navigation__item}>
-              <Link
-                to="/webplayer"
-                className={styles.navigation__link}
-              >Web Player</Link>
+              <Link to="/webplayer" className={styles.navigation__link}>
+                Web Player
+              </Link>
             </li>
             <li className={styles.navigation__item}>Premium</li>
             <li className={styles.navigation__item}>Download</li>

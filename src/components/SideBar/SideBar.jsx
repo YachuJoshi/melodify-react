@@ -1,50 +1,37 @@
-import React from 'react';
-import { Link } from '@reach/router';
+import React from "react";
+import { Link } from "react-router-dom";
+import Logo from "../../img/melodify-logo.png";
 
-import Logo from '../../img/melodify-logo.png';
-
-import { MdExplore } from 'react-icons/md';
+import { MdExplore } from "react-icons/md";
 import {
   IoMdVolumeHigh,
   IoMdRadio,
   IoMdMic,
   IoIosMusicalNote,
   IoMdAlbums,
-  IoMdHeart
-} from 'react-icons/io';
-import { GiCompactDisc } from 'react-icons/gi';
-import { FaFile } from 'react-icons/fa';
+  IoMdHeart,
+} from "react-icons/io";
+import { GiCompactDisc } from "react-icons/gi";
+import { FaFile } from "react-icons/fa";
 
-import styles from './sidebar.module.scss';
+import styles from "./sidebar.module.scss";
 
 const SideBar = () => {
   return (
     <div className={styles.sidebar}>
       <Link to="/" className={styles.link}>
-        <figure
-          className={styles.logo}
-        >
-          <img
-            src={Logo}
-            alt="Logo"
-            className={styles.logo__image}
-          />
-          <figcaption
-            className={styles.logo__name}>
-            Melodify
-          </figcaption>
+        <figure className={styles.logo}>
+          <img src={Logo} alt="Logo" className={styles.logo__image} />
+          <figcaption className={styles.logo__name}>Melodify</figcaption>
         </figure>
       </Link>
 
       <div className={styles.recommend}>
-
-        <h3 className={styles.recommend__heading}>
-          Recommend
-      </h3>
-        <ul
-          className={styles.recommend__list}>
-
-          <li className={`${styles.recommend__item} ${styles.recommend__item__active}`}>
+        <h3 className={styles.recommend__heading}>Recommend</h3>
+        <ul className={styles.recommend__list}>
+          <li
+            className={`${styles.recommend__item} ${styles.recommend__item__active}`}
+          >
             <MdExplore className={styles.recommend__icon} />
             <p className={styles.recommend__text}>Explore</p>
           </li>
@@ -68,18 +55,12 @@ const SideBar = () => {
             <GiCompactDisc className={styles.recommend__icon} />
             <p className={styles.recommend__text}>Albums</p>
           </li>
-
         </ul>
       </div>
 
       <div className={styles.library}>
-
-        <h3 className={styles.library__heading}>
-          My Library
-      </h3>
-        <ul
-          className={styles.library__list}>
-
+        <h3 className={styles.library__heading}>My Library</h3>
+        <ul className={styles.library__list}>
           <li className={styles.library__item}>
             <IoIosMusicalNote className={styles.library__icon} />
             <p className={styles.library__text}>Recently Played</p>
@@ -99,14 +80,11 @@ const SideBar = () => {
             <FaFile className={styles.library__icon} />
             <p className={styles.library__text}>Local Files</p>
           </li>
-
         </ul>
       </div>
-      <h3 className={styles.copy__text}>
-        Copyright © 2020 by Yachu Joshi
-      </h3>
+      <h3 className={styles.copy__text}>Copyright © 2020 by Yachu Joshi</h3>
     </div>
   );
 };
 
-export { SideBar }; 
+export { SideBar };

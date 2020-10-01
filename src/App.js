@@ -1,13 +1,14 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import "./sass/main.scss";
-
 import { Home } from "./pages/Home";
 import { WebPlayerPage } from "./pages/WebPlayer";
+import { UserProvider } from "./providers";
+
+import "./sass/main.scss";
 
 function App() {
   return (
-    <div className="App">
+    <UserProvider>
       <Switch>
         <Route path="/" exact>
           <Home />
@@ -16,7 +17,7 @@ function App() {
           <WebPlayerPage />
         </Route>
       </Switch>
-    </div>
+    </UserProvider>
   );
 }
 

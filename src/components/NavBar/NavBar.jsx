@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useCallback } from "react";
 import { Link } from "react-router-dom";
+import { signInWithGoogle, signOut } from "../../services";
+import { UserContext } from "../../providers";
 
 import Logo from "../../img/melodify-logo.png";
 
 import styles from "./navBar.module.scss";
 
 const NavBar = () => {
-  const scrollToTop = () => {
+  const scrollToTop = useCallback(() => {
     let element = document.querySelector("#header");
     element.scrollIntoView();
-  };
+  }, []);
 
+  const { user } = useContext(UserContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -49,7 +52,13 @@ const NavBar = () => {
             <li className={styles.navigation__item}>Premium</li>
             <li className={styles.navigation__item}>Download</li>
             <li className={styles.navigation__item}>Sign Up</li>
-            <li className={styles.navigation__item}>Login</li>
+            <li className={styles.navigation__item}>
+              {Object.keys(user).length ? (
+                <span onClick={signOut}>Log Out</span>
+              ) : (
+                <span onClick={signInWithGoogle}>Log In</span>
+              )}
+            </li>
           </ul>
         </nav>
       </div>

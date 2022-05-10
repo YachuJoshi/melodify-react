@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { CustomPlayerContainer } from './CustomPlayerContainer';
-import { SongWrapperBox } from './SongWrapperBox';
-import { LoadingSpinner } from '../LoadingSpinner/LoadingSpinner';
-import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
+import React, { useState, useEffect } from "react";
+import { cms } from "../../service";
+import { SongWrapperBox } from "./SongWrapperBox";
+import { ErrorMessage } from "../ErrorMessage/ErrorMessage";
+import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
+import { CustomPlayerContainer } from "./CustomPlayerContainer";
 
-import styles from './mainplayer.module.scss';
+import styles from "./mainplayer.module.scss";
 
 const MainPlayer = () => {
   const [loading, setLoading] = useState(true);
@@ -16,16 +16,23 @@ const MainPlayer = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios({
-      method: "GET",
-      url: "https://melodify-audio.herokuapp.com/music-lists"
-    }).then(res => {
-      setLoading(false);
-      setSongsList(res.data);
-    }).catch(err => {
-      setLoading(false);
-      setError(true);
-    });
+    cms
+      .get("/api/music-lists?populate=*")
+      .then(({ data: responseData }) => {
+        const { data } = responseData;
+        setLoading(false);
+        setSongsList(
+          data.map((d) => ({
+            artist: d.attributes.artist,
+            title: d.attributes.title,
+            audio: d.attributes.audio,
+          }))
+        );
+      })
+      .catch((err) => {
+        setLoading(false);
+        setError(true);
+      });
   }, []);
 
   useEffect(() => {
@@ -34,8 +41,8 @@ const MainPlayer = () => {
   }, [songsList, currentIndex]);
 
   const handleMusicShuffle = (status) => {
-    if (status === 'PREVIOUS') {
-      setCurrentIndex(index => {
+    if (status === "PREVIOUS") {
+      setCurrentIndex((index) => {
         if (index <= 0) {
           return 0;
         }
@@ -43,32 +50,30 @@ const MainPlayer = () => {
       });
     }
 
-    if (status === 'NEXT') {
-      setCurrentIndex(index => {
+    if (status === "NEXT") {
+      setCurrentIndex((index) => {
         if (index >= songsList.length) {
           return songsList.length;
         }
         return index + 1;
       });
     }
-  }
+  };
 
   const handleMusicChange = (index) => {
     setCurrentIndex(index);
-  }
+  };
 
   return (
     <>
       <div className={styles.topcharts}>
-        <h1 className={styles.topcharts__heading}>
-          Billborad Top Charts
-      </h1>
+        <h1 className={styles.topcharts__heading}>Billborad Top Charts</h1>
         {loading && <LoadingSpinner />}
         {error && <ErrorMessage />}
         <div className={styles.songs__collection}>
           {songsList.map((song, index) => (
             <SongWrapperBox
-              key={song.Title}
+              key={song.title}
               song={song}
               index={index}
               handleMusicChange={handleMusicChange}
@@ -77,22 +82,22 @@ const MainPlayer = () => {
         </div>
       </div>
       <div className={styles.musicplayer}>
-        {filteredSongList.map(song => (
+        {filteredSongList.map((song) => (
           <div key={song} className={styles.sPlayer}>
             <div className={styles.sDetails}>
-              <div className={styles.sName}>{song.Title}</div>
-              <div className={styles.sArtist}>{song.Artist}</div>
+              <div className={styles.sName}>{song.title}</div>
+              <div className={styles.sArtist}>{song.artist}</div>
             </div>
             <CustomPlayerContainer
               handleMusicShuffle={handleMusicShuffle}
-              key={song.Title}
-              url={song.Song[0].url}
+              key={song.title}
+              url={song.audio.data.attributes.url}
             />
           </div>
         ))}
       </div>
     </>
   );
-}
+};
 
 export { MainPlayer };

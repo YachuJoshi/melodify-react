@@ -1,6 +1,6 @@
 import React, { useState, useContext, useCallback } from "react";
 import { Link } from "react-router-dom";
-import { signInWithGoogle, signOut } from "../../services";
+import { signInWithGoogle, signOut } from "../../firebase";
 import { UserContext } from "../../providers";
 
 import Logo from "../../img/melodify-logo.png";
